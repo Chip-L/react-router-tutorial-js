@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 const Root = () => (
   <>
     <div id="sidebar">
@@ -29,7 +31,9 @@ const Root = () => (
         </ul>
       </nav>
     </div>
-    <div id="detail"></div>
+    <div id="detail">
+      <Outlet />
+    </div>
   </>
 );
 
