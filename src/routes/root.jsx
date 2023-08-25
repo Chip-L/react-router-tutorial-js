@@ -33,7 +33,10 @@ export default function Root() {
     new URLSearchParams(navigation.location.search).has("q");
 
   const handleSearchChange = (event) => {
-    submit(event.currentTarget.form);
+    const isFirstSearch = q == null;
+    submit(event.currentTarget.form, {
+      replace: !isFirstSearch,
+    });
   };
 
   useEffect(() => {
